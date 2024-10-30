@@ -1,0 +1,104 @@
+/* src/styles/Team.css */
+
+.team-section {
+    background: linear-gradient(to bottom right, #0d1f2b, #2a3742); /* Dark gradient background */
+    color: #ffffff; /* White text color */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 60px 40px; /* Increased padding for a fuller look */
+    font-family: 'Poppins', sans-serif; /* Modern, techy font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-section h2 {
+    font-size: 4em; /* Larger font size for header */
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Enhanced shadow for depth */
+    letter-spacing: 1.5px; /* Slightly increased letter spacing */
+    text-align: center;
+}
+
+.team-carousel {
+    display: flex;
+    padding: 20px 0;
+    gap: 40px; /* Increased gap between cards */
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    max-width: 1600px; /* Increase max width for larger screens */
+    justify-content: space-around; /* Spread out the cards across the full width */
+    align-items: center;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    padding: 40px;
+    text-align: center;
+    min-width: 280px; /* Minimum card width */
+    max-width: 320px; /* Maximum card width */
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.1); /* Slightly larger zoom effect on hover */
+}
+
+.team-card img {
+    width: 150px; /* Larger image size */
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.team-card h3 {
+    font-size: 1.8em; /* Larger font for name */
+    margin-bottom: 10px;
+    color: #00bcd4; /* Bright cyan color */
+}
+
+.team-card p {
+    font-size: 1.2em; /* Larger font for role */
+    color: #e0e0e0; /* Light gray for role text */
+    margin-bottom: 30px;
+}
+
+.connect-btn {
+    padding: 15px 30px; /* Larger button padding */
+    font-size: 1.2em; /* Larger font size for button */
+    background: linear-gradient(45deg, #00bcd4, #007c92); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+.connect-btn:hover {
+    background: linear-gradient(45deg, #007c92, #00bcd4); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-section h2 {
+        font-size: 3em;
+    }
+
+    .team-carousel {
+        gap: 20px; /* Smaller gap on mobile */
+        padding: 10px 0;
+    }
+
+    .team-card {
+        width: 90%;
+        max-width: 400px; /* Larger max-width for mobile */
+    }
+}

@@ -1,0 +1,109 @@
+/* src/styles/Offerings.css */
+
+.offerings-container {
+    background: linear-gradient(to bottom right, #0d1f2b, #2a3742); /* Dark gradient background */
+    color: #ffffff; /* White text color */
+    min-height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+    align-items: center; /* Center align items */
+    justify-content: flex-start; /* Start alignment */
+    padding: 40px; /* General padding */
+}
+
+/* src/styles/Offerings.css */
+
+.offerings-header {
+    text-align: center; /* Center header text */
+    margin: 0; /* Remove any margins */
+    padding: 40px 20px; /* Add padding for spacing */
+    width: 100vw; /* Set width to cover the entire viewport width */
+    position: relative; /* Positioning context for any absolute elements inside */
+    left: 50%; /* Center align */
+    right: 50%; /* Center align */
+    margin-left: -50vw; /* Adjust margin to pull the header back to the left */
+    margin-right: -50vw; /* Adjust margin to pull the header back to the right */
+    background: rgba(13, 31, 43, 0.8); /* Optional: Background color with transparency */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Optional: Shadow for depth */
+}
+
+
+.offerings-header h2 {
+    font-size: 4em; /* Larger font size */
+    margin-bottom: 15px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+}
+
+.offerings-header p {
+    font-size: 1.5em; /* Larger subtitle font size */
+    color: #cccccc; /* Lighter text color for the subtitle */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Increased gap between cards */
+}
+
+.card {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px; /* Increased padding */
+    width: 320px; /* Increased width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    position: relative;
+    text-align: left;
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.card h3 {
+    font-size: 1.8em; /* Larger font size for card titles */
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1em; /* Adjusted text size */
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.icon {
+    font-size: 2em; /* Increased icon size */
+}
+
+.purple {
+    color: #8a2be2;
+}
+
+.yellow {
+    color: #fdd835;
+}
+
+.green {
+    color: #4caf50;
+}
+
+.red {
+    color: #ff5722;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+}

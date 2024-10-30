@@ -1,0 +1,143 @@
+/* Main content styling */
+.main-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+/* Background video styling */
+.main-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Maintain full width */
+  height: 80%; /* Reduced height for smaller video */
+  object-fit: cover; /* Ensures the video covers the area */
+  z-index: -1; /* Place video behind content */
+}
+
+/* Hero section styling */
+.hero-section {
+  text-align: center;
+  color: #d3d0d0; /* White text for contrast */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  padding: 40px; /* Increased padding for better spacing */
+  border-radius: 15px; /* Rounded corners */
+  z-index: 1; /* Keep content above the video */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 20px; /* Margin for smaller screens */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+/* Headings for consistency */
+.hero-section h1 {
+  font-size: 2.5em; /* Adjusted size for headings */
+  margin: 0.5em 0; /* Margin for spacing */
+  color: #00c3ff; /* Techy blue color for headings */
+}
+
+.hero-section p {
+  font-size: 1.2em; /* Paragraph font size */
+  margin: 0.5em 0; /* Margin for spacing */
+  color: #d0d0d0; /* Light grey color for text */
+}
+
+/* Button styling */
+.learn-more-btn {
+  padding: 12px 25px; /* Padding for button */
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1em; /* Font size */
+  transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 20px; /* Padding for footer */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker transparent background for footer */
+  color: #e0e0e0; /* Light text color */
+  border-top: 2px solid #00c3ff; /* Top border to enhance separation */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Footer links styling */
+.footer a {
+  color: #00bcd4; /* Bright cyan for links */
+  text-decoration: none; /* No underline */
+  margin: 0 10px; /* Space between links */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.footer a:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+/* Partners logos styling */
+.partners-logos {
+  display: flex; /* Flexbox for logos */
+  justify-content: center; /* Center alignment */
+  align-items: center; /* Center alignment */
+  flex-wrap: wrap; /* Allow wrapping of logos */
+  gap: 15px; /* Space between logos */
+  padding: 10px 0; /* Padding around logos */
+}
+
+.partners-logos img {
+  width: 100px; /* Fixed width for logos */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.partners-logos img:hover {
+  transform: scale(1.1); /* Slightly enlarge logos on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2em; /* Smaller font size for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1em; /* Smaller font size for mobile */
+  }
+
+  .learn-more-btn {
+    padding: 10px 20px; /* Smaller button padding */
+  }
+
+  .partners-logos img {
+    width: 80px; /* Smaller logos on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px; /* Less padding on small screens */
+  }
+
+  .hero-section h1 {
+    font-size: 1.5em; /* Further reduced heading size */
+  }
+
+  .hero-section p {
+    font-size: 0.9em; /* Further reduced paragraph size */
+  }
+
+  .learn-more-btn {
+    padding: 8px 15px; /* Further reduced button size */
+    font-size: 0.9em; /* Further reduced font size */
+  }
+}
