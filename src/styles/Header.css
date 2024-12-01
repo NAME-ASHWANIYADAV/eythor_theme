@@ -1,108 +1,78 @@
-/* Header styling */
-.header {
-  display: flex; /* Flexbox for alignment */
-  justify-content: space-between; /* Space between logo and nav */
-  align-items: center; /* Center vertically */
-  padding: 15px 30px; /* Padding for top and bottom, left and right */
-  background: linear-gradient(90deg, #1a1a1a, #333); /* Gradient background for a techy look */
-  color: #ffffff; /* White text for contrast */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-  position: relative; /* Position for z-index management */
-  z-index: 10; /* Ensure it stays above other content */
+/* src/styles/Header.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Logo styling */
-.logo {
-  display: flex; /* Flexbox for logo alignment */
-  align-items: center; /* Center vertically */
-  font-size: 1.8em; /* Logo font size */
-  color: #00c3ff; /* Techy blue color for logo text */
-  text-transform: uppercase; /* Uppercase for a bold look */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo img {
-  width: 50px; /* Logo image width */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Space between logo image and text */
+  height: 40px;
 }
 
-/* Navbar styling */
 .navbar {
-  flex-grow: 1; /* Allow navbar to grow and fill space */
-  text-align: center; /* Center the nav items */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  display: flex; /* Flexbox for horizontal layout */
-  justify-content: center; /* Center the items */
-  gap: 40px; /* Space between items */
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar li {
-  position: relative; /* Position for underline effect */
+.navbar ul li {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.navbar a {
-  color: #ffffff; /* White text color for links */
-  text-decoration: none; /* Remove underline */
-  font-size: 1.2em; /* Font size for nav links */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition and scale effect */
+.navbar ul li a {
+  color: black;
+  text-decoration: none;
 }
 
-.navbar a:hover {
-  color: #00c3ff; /* Change color on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.navbar ul li a:hover,
+.navbar ul li a.active-link {
+  color: #0000ff;
+  font-weight: bold;
 }
 
-/* Contact button styling */
+.contact-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .contact-btn {
-  padding: 10px 20px; /* Padding for button */
-  background-color: #007bff; /* Button background color */
-  color: #ffffff; /* Button text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  font-size: 1em; /* Font size for button text */
-  transition: background 0.3s ease, transform 0.3s ease; /* Smooth background transition */
+  background-color: #0000ff;
+  color: white;
+  font-size: 14px;
+  text-transform: lowercase;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 .contact-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column; /* Stack items on smaller screens */
-    align-items: flex-start; /* Align items to start */
-  }
-
-  .navbar {
-    width: 100%; /* Full width for navbar */
-    margin-top: 10px; /* Space above navbar */
-  }
-
-  .navbar ul {
-    flex-direction: column; /* Stack nav items vertically */
-    gap: 15px; /* Reduce space between items */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.5em; /* Smaller logo font size */
-  }
-
-  .navbar a {
-    font-size: 1em; /* Smaller nav link font size */
-  }
-
-  .contact-btn {
-    padding: 8px 15px; /* Smaller button size */
-    font-size: 0.9em; /* Smaller button font size */
-  }
+  background-color: #3333ff;
+  transition: 0.3s ease;
 }

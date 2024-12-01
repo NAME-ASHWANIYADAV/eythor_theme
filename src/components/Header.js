@@ -6,21 +6,24 @@ import '../styles/Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <Link to="/" className="logo">
-        <img src={`${process.env.PUBLIC_URL}/assets/eythor.png`} alt="Eythor Logo" />
-        Eythor
-      </Link>
+      <div className="logo">
+        <Link to="/">
+          <img src={`${process.env.PUBLIC_URL}/assets/eythor.png`} alt="Eythor Logo" />
+        </Link>
+      </div>
       <nav className="navbar">
         <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/offerings">Features</a></li>
-          <li><a href="/solutions">Our Mission</a></li>
-          <li><a href="/team">Team</a></li>
+          <li><Link to="/" className="active-link">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/offerings">Our Products</Link></li>
+          <li><Link to="/team">Team</Link></li>
         </ul>
       </nav>
-      <Link to="/contact">
-        <button className="contact-btn">Contact Us</button>
-      </Link>
+      <div className="contact-btn-container">
+        <Link to="/contact">
+          <button className="contact-btn">contact us</button>
+        </Link>
+      </div>
     </header>
   );
 };

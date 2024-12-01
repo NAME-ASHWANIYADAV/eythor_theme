@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header /> {/* Include the Header here to display on all pages */}
+        <Header /> Include the Header here to display on all pages
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />

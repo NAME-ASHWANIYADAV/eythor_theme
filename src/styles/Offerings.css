@@ -1,89 +1,100 @@
 /* src/styles/Offerings.css */
 
 .offerings-container {
-    background: linear-gradient(to bottom right, #0d1f2b, #2a3742); /* Dark gradient background */
-    color: #ffffff; /* White text color */
-    min-height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(135deg, #0d1f2b 0%, #2a3742 100%);
+    color: #ffffff;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack header and content vertically */
-    align-items: center; /* Center align items */
-    justify-content: flex-start; /* Start alignment */
-    padding: 40px; /* General padding */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px;
+    width: 100vw;
+    overflow-x: hidden;
 }
-
-/* src/styles/Offerings.css */
 
 .offerings-header {
-    text-align: center; /* Center header text */
-    margin: 0; /* Remove any margins */
-    padding: 40px 20px; /* Add padding for spacing */
-    width: 100vw; /* Set width to cover the entire viewport width */
-    position: relative; /* Positioning context for any absolute elements inside */
-    left: 50%; /* Center align */
-    right: 50%; /* Center align */
-    margin-left: -50vw; /* Adjust margin to pull the header back to the left */
-    margin-right: -50vw; /* Adjust margin to pull the header back to the right */
-    background: rgba(13, 31, 43, 0.8); /* Optional: Background color with transparency */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Optional: Shadow for depth */
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 100vw;
+    background: rgba(20, 35, 50, 0.85);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-bottom: 40px;
 }
 
-
 .offerings-header h2 {
-    font-size: 4em; /* Larger font size */
-    margin-bottom: 15px; /* Space below the heading */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
 .offerings-header p {
-    font-size: 1.5em; /* Larger subtitle font size */
-    color: #cccccc; /* Lighter text color for the subtitle */
+    font-size: 1.3em;
+    color: #b0b0b0;
 }
 
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Increased gap between cards */
+    gap: 50px;
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px;
 }
 
 .card {
-    background-color: #1b1b1b;
+    background: linear-gradient(145deg, #23272e, #1c2027);
     color: #ffffff;
-    border-radius: 15px;
-    padding: 30px; /* Increased padding */
-    width: 320px; /* Increased width */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
     position: relative;
     text-align: left;
-    transition: transform 0.3s ease; /* Animation on hover */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
-    font-size: 1.8em; /* Larger font size for card titles */
+    font-size: 2em;
     margin-bottom: 15px;
     color: #ffffff;
 }
 
 .card p {
-    font-size: 1em; /* Adjusted text size */
-    color: #aaaaaa;
-    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #c0c0c0;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .icon-container {
     position: absolute;
     bottom: 15px;
-    left: 15px;
+    right: 15px;
 }
 
 .icon {
-    font-size: 2em; /* Increased icon size */
+    font-size: 2.5em;
+    color: #8a2be2;
+    transition: color 0.3s ease;
 }
 
+.card:hover .icon {
+    color: #d3a6ff;
+}
+
+/* Icon Colors for Themes */
 .purple {
     color: #8a2be2;
 }
@@ -101,9 +112,35 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .offerings-header h2 {
+        font-size: 3em;
+    }
+
+    .cards-container {
+        gap: 40px;
+    }
+
+    .card {
+        padding: 30px;
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 768px) {
     .cards-container {
-        flex-direction: column; /* Stack cards on smaller screens */
-        align-items: center; /* Center cards */
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .offerings-header h2 {
+        font-size: 2.5em;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+        max-width: 100%;
     }
 }
